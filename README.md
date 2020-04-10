@@ -29,15 +29,16 @@
 
 <h2>Landing Page</h2>
 
-
+<img width="1680" alt="Screen Shot 2020-04-10 at 11 30 36 AM" src="https://user-images.githubusercontent.com/48130732/79013683-e3df5d80-7b2e-11ea-8449-d5a8cf48a19e.png">
 
 <h2>Login Page</h2>
 
-
+<img width="1680" alt="Screen Shot 2020-04-10 at 11 30 48 AM" src="https://user-images.githubusercontent.com/48130732/79013691-e5a92100-7b2e-11ea-9e8f-2fee9d991fdc.png">
 
 <h2>Registration Page</h2>
 
-
+<img width="1680" alt="Screen Shot 2020-04-10 at 11 30 59 AM" src="https://user-images.githubusercontent.com/48130732/79013694-e641b780-7b2e-11ea-8a40-1c2b6a3a452b.png">
 
 <h2>Expenses Page</h2>
 
+<img width="1680" alt="Screen Shot 2020-04-10 at 11 31 13 AM" src="https://user-images.githubusercontent.com/48130732/79013698-e772e480-7b2e-11ea-8174-edc1eb93abf5.png">
