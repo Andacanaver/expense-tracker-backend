@@ -1,26 +1,43 @@
-# Express Boilerplate!
+<h1>Expense Tracker App</h1>
 
-This is a boilerplate project used for starting new projects!
+<p>This is an app to help track expenses. Users can register and login to track their expenses or login using the demo account.</p>
 
-## Set up
+<h2>Technologies Used</h2>
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+<ul>
+  <li>React.js</li>
+  <li>Node.js</li>
+  <li>Postgresql</li>
+</ul>
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+<h2>Launch</h2>
 
-## Scripts
+<ol>
+  <li>Fork and clone the repo</li>
+  <li>'npm install' in the directory</li>
+  <li>create the database and run 'npm run migrate' in the database</li>
+  <li>m start' or 'npm run dev' to start the server</li>
+</ol>
 
-Start the application `npm start`
+<h2>Functionality</h2>
 
-Start nodemon for the application `npm run dev`
+<p>The app uses GET, POST and DELETE requests. In the future I would like to add in PATCH requests for both expenses and userss.</p>
 
-Run the tests `npm test`
+<h2>Project Status</h2>
 
-## Deploying
+<p>This is a Minimal Viable Product (MVP)</p>
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+<h2>Landing Page</h2>
+
+
+
+<h2>Login Page</h2>
+
+
+
+<h2>Registration Page</h2>
+
+
+
+<h2>Expenses Page</h2>
+
