@@ -9,9 +9,9 @@ const jsonParser = express.json()
 
 const serializeExpense = expense => ({
     id: expense.id,
-    expense: expense.expense,
+    expense: xss(expense.expense),
     user_id: expense.user_id,
-    description: expense.description,
+    description: xss(expense.description),
     date_created: expense.date_created
 });
 
