@@ -21,14 +21,15 @@ expenseRouter
     .get((req, res, next) => {
         const knexInstance = req.app.get('db');
         ExpenseService.getUsersExpenses(knexInstance, req.user.id)
-            .then(expense => {
+            .then((expense) => {
+                
                 res.json(expense.map(serializeExpense))
             })
             .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
         const knexInstance = req.app.get('db')
-        const { expense, description, user_id, date_created } = req.body;
+        const { expense, description, user_id, date_created, id } = req.body;
         for (const field of ['expense']) {
             if (!req.body[field]) {
                 return res.status(400).json({
@@ -37,6 +38,7 @@ expenseRouter
             }
         }
         const newExpense = {
+            id,
             expense,
             description,
             user_id: req.user.id,

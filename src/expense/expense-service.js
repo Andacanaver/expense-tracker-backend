@@ -1,12 +1,13 @@
 const ExpenseService = {
     getAllExpenses(db) {
-        return db.select('*').from('expense');
+        return db.select('*').from('expense').orderBy('date_created', 'desc');
     },
     getUsersExpenses(db, id) {
         return db
             .select('*')
             .from('expense')
-            .where('user_id', id);
+            .where('user_id', id)
+            .orderBy('date_created', 'DESC');
     },
     insertExpense(db, newExpense) {
         return db
