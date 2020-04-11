@@ -21,7 +21,7 @@
 
 <h2>Functionality</h2>
 
-<p>The app uses GET, POST and DELETE requests. In the future I would like to add in PATCH requests for both expenses and userss.</p>
+<p>The app uses GET requests to pull the expense information off the database. POST requests get sent to the database for adding expenses, logging a user in and creating a new user. DELETE requests are called when deleting an expense. In the future I would like to add in PATCH requests for both expenses and userss.</p>
 
 <h2>Project Status</h2>
 
