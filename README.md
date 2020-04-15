@@ -2,6 +2,8 @@
 
 <p>This is an app to help track expenses. Users can register and login to track their expenses or login using the demo account.</p>
 
+<a href="https://expense.moesprojects.com">Live Site</a>
+
 <h2>Technologies Used</h2>
 
 <ul>
@@ -21,8 +23,140 @@
 
 <h2>Functionality</h2>
 
-<p>The app uses GET, POST and DELETE requests. In the future I would like to add in PATCH requests for both expenses and userss.</p>
+<p>The app uses GET requests to pull the expense information off the database. POST requests get sent to the database for adding expenses, logging a user in and creating a new user. DELETE requests are called when deleting an expense. In the future I would like to add in PATCH requests for both expenses and userss.</p>
 
+<h2>Users</h2>
+
+```
+{
+  username: {
+    type: string,
+    required: true
+  },
+  password: {
+    type: string,
+    required: true
+  },
+  full_name: {
+    type: string
+  },
+  email_address: {
+    type: email,
+    required: true
+  }
+}
+```
+
+<h3>Expense</h3>
+
+```
+{
+  expense: integer,
+  description: string,
+  user_id: integer,
+  date_created: timestamp,
+  id: integer
+}
+```
+
+<h3>API Overview</h3>
+
+```
+ /api
+ .
+ |-- /auth
+ |    |__ POST
+ |          |-- /login
+ |
+ |-- /users
+ |      |__ GET
+ |           |-- /
+ |      |__ POST
+ |           |-- /
+ |-- /expenses
+ |       |__ GET
+ |            |-- /
+ |            |-- /:expense_id
+ |       |__ POST
+ |            |-- /
+ |       |__ DELETE
+ |            |-- /:expense_id
+ ```
+ 
+ <h3>POST</h3>
+ 
+ ```
+ /api/auth/login
+ 
+ // req.body
+ {
+  username: string,
+  password: string
+}
+// res.body
+{
+  authToken: string
+}
+```
+
+<h3>GET</h3> 
+
+```
+/api/users
+
+// res.body
+{
+  username: string,
+  password: hashstring,
+  full_name: string,
+  email_address: email
+}
+```
+
+<h3>POST</h3> 
+
+```
+/api/users
+
+// res.body
+{
+  username: string,
+  password: hashstring,
+  full_name: string,
+  email_address: email
+}
+```
+
+<h3>POST</h3> 
+
+```
+/api/expenses
+
+ // res.body
+ {
+  expense: integer,
+  description: string,
+  date_created: timestamp,
+  id: integer,
+  user_id: integer
+}
+```
+
+<h3>GET</h3> 
+
+```
+/api/expenses
+
+//res.body
+{
+  expense: integer,
+  description: string,
+  date_created: timestamp,
+  id: integer,
+  user_id: integer
+}
+```
+ 
 <h2>Project Status</h2>
 
 <p>This is a Minimal Viable Product (MVP)</p>
