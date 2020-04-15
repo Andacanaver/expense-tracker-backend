@@ -83,9 +83,11 @@
  |            |-- /:expense_id
  ```
  
- <h3>POST</h3> ```/api/auth/login```
+ <h3>POST</h3>
  
  ```
+ /api/auth/login
+ 
  // req.body
  {
   username: string,
@@ -97,9 +99,11 @@
 }
 ```
 
-<h3>GET</h3> ```/api/users```
+<h3>GET</h3> 
 
 ```
+/api/users
+
 // res.body
 {
   username: string,
@@ -109,9 +113,11 @@
 }
 ```
 
-<h3>POST</h3> ```/api/users```
+<h3>POST</h3> 
 
 ```
+/api/users
+
 // res.body
 {
   username: string,
@@ -121,9 +127,11 @@
 }
 ```
 
-<h3>POST</h3> ```/api/expenses```
+<h3>POST</h3> 
 
 ```
+/api/expenses
+
  // res.body
  {
   expense: integer,
@@ -134,9 +142,11 @@
 }
 ```
 
-<h3>GET</h3> ```/api/expenses```
+<h3>GET</h3> 
 
 ```
+/api/expenses
+
 //res.body
 {
   expense: integer,
