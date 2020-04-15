@@ -83,7 +83,7 @@
  |            |-- /:expense_id
  ```
  
- <h3>POST ```/api/auth/login```</h3>
+ <h3>POST</h3> ```/api/auth/login```
  
  ```
  // req.body
@@ -97,7 +97,7 @@
 }
 ```
 
-<h3>GET ```/api/users```</h3>
+<h3>GET</h3> ```/api/users```
 
 ```
 // res.body
@@ -109,7 +109,7 @@
 }
 ```
 
-<h3>POST ```/api/users```</h3>
+<h3>POST</h3> ```/api/users```
 
 ```
 // res.body
@@ -121,7 +121,7 @@
 }
 ```
 
-<h3>POST ```/api/expenses```</h3>
+<h3>POST</h3> ```/api/expenses```
 
 ```
  // res.body
@@ -134,7 +134,7 @@
 }
 ```
 
-<h3>GET ```/api/expenses```</h3>
+<h3>GET</h3> ```/api/expenses```
 
 ```
 //res.body
