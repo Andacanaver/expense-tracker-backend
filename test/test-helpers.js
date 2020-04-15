@@ -163,9 +163,9 @@ function seedUsersTable(db, users) {
         })
 }
 
-function seedExpenseTable(db, users, expenses) {
+function seedExpenseTable(db, expenses) {
     return db.transaction(async trx => {
-        await seedUsersTable(trx, users)
+        
         await trx.into('expense').insert(expenses)
         await trx.raw(`SELECT setval('expense_id_seq', ?)`, [expenses[expenses.length - 1].id])
     })
@@ -176,6 +176,7 @@ function makeAuthHeader(user, secret = process.env.JWT_SECRET) {
         subject: user.username,
         algorithm: 'HS256'
     })
+    
     return `Bearer ${token}`
 
 }

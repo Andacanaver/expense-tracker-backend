@@ -64,6 +64,7 @@ usersRouter
             .catch(next)
     })
 
+{/* //For future use
 usersRouter
     .route("/:user_id")
     .all(requireAuth)
@@ -97,5 +98,5 @@ usersRouter
             })
             .catch(next);
     });
-
+*/}
 module.exports = usersRouter

@@ -47,6 +47,7 @@ expenseRouter
         ExpenseService.insertExpense(knexInstance, newExpense)
             .then(expense => {
                 res.status(201)
+                    .location(path.posix.join(req.originalUrl, `/${expense.id}`))
                     .json(serializeExpense(expense))
             })
             .catch(next)
@@ -67,9 +68,6 @@ expenseRouter
             })
             .catch(next)
     })
-    .get((req, res, next) => {
-        res.json(serializeExpense(res.expense))
-    })
     .delete((req, res, next) => {
         ExpenseService
             .deleteExpense(req.app.get('db'), req.params.expense_id)
@@ -78,5 +76,10 @@ expenseRouter
             })
             .catch(next)
     })
+{/* for future use
+    .get((req, res, next) => {
+        res.json(serializeExpense(res.expense))
+    })
+    */}
 
 module.exports = expenseRouter;
