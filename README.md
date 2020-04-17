@@ -25,7 +25,7 @@
 
 <p>The app uses GET requests to pull the expense information off the database. POST requests get sent to the database for adding expenses, logging a user in and creating a new user. DELETE requests are called when deleting an expense. In the future I would like to add in PATCH requests for both expenses and userss.</p>
 
-<h2>Users</h2>
+<h3>Users</h3>
 
 <p>For Posting and Getting user accounts</p>
 
