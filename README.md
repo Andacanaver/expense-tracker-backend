@@ -29,21 +29,10 @@
 
 ```
 {
-  username: {
-    type: string,
-    required: true
-  },
-  password: {
-    type: string,
-    required: true
-  },
-  full_name: {
-    type: string
-  },
-  email_address: {
-    type: email,
-    required: true
-  }
+  full_name: string,
+  email_address: email,
+  username: string,
+  password: string
 }
 ```
 
