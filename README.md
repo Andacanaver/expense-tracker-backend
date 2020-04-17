@@ -59,6 +59,15 @@
 }
 ```
 
+<h3>Auth</h3>
+
+```
+{
+  username: string,
+  password: string
+}
+```
+
 <h3>API Overview</h3>
 
 ```
@@ -107,7 +116,7 @@
 // res.body
 {
   username: string,
-  password: hashstring,
+  password: string,
   full_name: string,
   email_address: email
 }
@@ -121,7 +130,7 @@
 // res.body
 {
   username: string,
-  password: hashstring,
+  password: string,
   full_name: string,
   email_address: email
 }
