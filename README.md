@@ -27,6 +27,8 @@
 
 <h2>Users</h2>
 
+<p>For Posting and Getting user accounts</p>
+
 ```
 {
   full_name: string,
@@ -38,7 +40,10 @@
 
 <h3>Expense</h3>
 
+<p>For Posting, Getting and Deleting expenses</p>
+
 ```
+For Posting, Getting and Deleting expenses
 {
   expense: integer,
   description: string,
@@ -49,6 +54,8 @@
 ```
 
 <h3>Auth</h3>
+
+<p>For Posting to the Authentication of a user</p>
 
 ```
 {
@@ -65,7 +72,6 @@
  |-- /auth
  |    |__ POST
  |          |-- /login
- |
  |-- /users
  |      |__ GET
  |           |-- /
@@ -116,7 +122,15 @@
 ```
 /api/users
 
-// res.body
+// req.body
+{
+  username: string,
+  password: string,
+  full_name: string,
+  email_address: email
+}
+
+//res.body
 {
   username: string,
   password: string,
@@ -130,7 +144,16 @@
 ```
 /api/expenses
 
- // res.body
+ // req.body
+ {
+  expense: integer,
+  description: string,
+  date_created: timestamp,
+  id: integer,
+  user_id: integer
+}
+
+// res.body
  {
   expense: integer,
   description: string,
