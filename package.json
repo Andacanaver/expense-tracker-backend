@@ -10,7 +10,7 @@
     "predeploy": "npm audit",
     "migrate": "postgrator --config postgrator-config.js",
     "migrate:test": "env NODE_ENV=test npm run migrate",
-    "migrate:production": "env SSL=true DATABASE_URL npm run migrate"
+    "migrate:production": "env SSL=true process.env.DATABASE_URL npm run migrate"
   },
   "keywords": [],
   "author": "",
